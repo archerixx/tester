@@ -1,3 +1,5 @@
+console.log("Custom script loaded successfully");
+
 // Purchase event
 function handlePurchaseEvent(transactionItems) {
   console.log("Purchase event triggered:", transactionItems);
