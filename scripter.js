@@ -1,12 +1,12 @@
 // Purchase event
-function handlePurchaseEvent(transactionItems) {
+function handlePurchaseEvent(transactionItems, contact) {
   console.log("Purchase event triggered:", transactionItems);
 
   // Example: Send data to your endpoint
   fetch("https://myurladdress.app/webhook/AppScript/Test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ transactionItems }),
+    body: JSON.stringify({ transactionItems, contact }),
   })
     .then(response => response.json())
     .then(data => console.log("Purchase data sent successfully:", data))
@@ -14,14 +14,14 @@ function handlePurchaseEvent(transactionItems) {
 }
 
 // Product details event
-function handleProductDetailsEvent(productViewed) {
+function handleProductDetailsEvent(productViewed, contact) {
   console.log("Product details event triggered:", productViewed);
 
   // Example: Send data to your endpoint
   fetch("https://myurladdress.app/webhook/AppScript/Test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ productViewed }),
+    body: JSON.stringify({ productViewed, contact }),
   })
     .then(response => response.json())
     .then(data => console.log("Product details sent successfully:", data))
@@ -29,14 +29,14 @@ function handleProductDetailsEvent(productViewed) {
 }
 
 // Add to cart event
-function handleAddToCartEvent(productCart) {
+function handleAddToCartEvent(productCart, contact) {
   console.log("Add to cart event triggered:", productCart);
 
   // Example: Send data to your endpoint
   fetch("https://myurladdress.app/webhook/AppScript/Test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ productCart }),
+    body: JSON.stringify({ productCart, contact }),
   })
     .then(response => response.json())
     .then(data => console.log("Add to cart data sent successfully:", data))
@@ -44,14 +44,14 @@ function handleAddToCartEvent(productCart) {
 }
 
 // Remove from cart event
-function handleRemoveFromCartEvent(productCart) {
+function handleRemoveFromCartEvent(productCart, contact) {
   console.log("Remove from cart event triggered:", productCart);
 
   // Example: Send data to your endpoint
   fetch("https://myurladdress.app/webhook/AppScript/Test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ productCart }),
+    body: JSON.stringify({ productCart, contact }),
   })
     .then(response => response.json())
     .then(data => console.log("Remove from cart data sent successfully:", data))
@@ -59,14 +59,14 @@ function handleRemoveFromCartEvent(productCart) {
 }
 
 // Start checkout event
-function handleStartCheckoutEvent(cart) {
+function handleStartCheckoutEvent(cart, contact) {
   console.log("Start checkout event triggered:", cart);
 
   // Example: Send data to your endpoint
   fetch("https://myurladdress.app/webhook/AppScript/Test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ cart }),
+    body: JSON.stringify({ cart, contact }),
   })
     .then(response => response.json())
     .then(data => console.log("Checkout data sent successfully:", data))
